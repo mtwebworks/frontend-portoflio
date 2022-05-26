@@ -1,0 +1,31 @@
+// Colors -------------------
+$bg-color-primary: #171916;
+
+$typography-color-primary: #fde8e6;
+$typography-color-secondary: #a69997;
+
+$accent-color-primary: #c7303c;
+$accent-color-secondary: #34c8ae;
+
+
+// Typography -------------------
+// Fontface 
+
+$krona: 'Krona One', sans-serif;
+$lexend: 'Lexend', sans-serif;
+
+// Responsive breakpoints -------------------
+$breakpoints: (
+    small: (min-width: 460px),
+    medium: (min-width: 768px),
+    large: (min-width: 1024px),
+    xlarge: (min-width: 1440px),
+    xxlarge: (min-width: 1920px)
+);
+
+// Page width -------------------
+$page-width-small: 90vw;
+$page-width-medium: 96vw;
+$page-width-large: 94vw;
+$page-width-xlarge: 92vw;
+$page-width-xxlarge: 90vw;

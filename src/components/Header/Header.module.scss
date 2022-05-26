@@ -1,0 +1,131 @@
+@import '../../variables.module';
+@import '../../mixin.module';
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  &__img-wrapper {
+    top: 15%;
+    position: absolute;
+    width: 100%;
+    max-width: 1080px;
+
+    @include mediaqueries(medium) {
+      top: 10%;
+      right: 0;
+    }
+
+    @include mediaqueries(large) {
+      right: -10%;
+    }
+
+    @include mediaqueries(xlarge) {
+      right: 0%;
+    }
+  }
+
+  &__kv,
+  &__kv-background {
+    position: absolute;
+    right: 52.5%;
+    width: 125%;
+    max-width: 1080px;
+    transform: translateX(50%);
+
+    @include mediaqueries(medium) {
+      right: 45%;
+      width: 85%;
+    }
+
+    @include mediaqueries(large) {
+      right: 45%;
+      width: 65%;
+    }
+
+    @include mediaqueries(xlarge) {
+      right: 40%;
+      width: 75%;
+    }
+
+    @include mediaqueries(xxlarge) {
+      right: 45%;
+      width: 80%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 67.25%;
+    font-family: $krona;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include mediaqueries(small) {
+      top: 65%;
+      font-size: 3.25rem;
+    }
+
+    @include mediaqueries(medium) {
+      font-size: 5.25rem;
+    }
+
+    @include mediaqueries(large) {
+      top: 40%;
+      font-size: 6.25rem;
+      transform: translateX(-1%);
+    }
+
+    @include mediaqueries(xlarge) {
+      top: 40%;
+      font-size: 7.5rem;
+      transform: translateX(-1%);
+    }
+  }
+
+  &__hr {
+    display: block;
+    width: 100%;
+    border: 1px solid $accent-color-primary;
+    margin-left: 1%;
+    margin-top: 2%;
+
+    @include mediaqueries(medium) {
+      margin-top: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-left: .5%;
+    margin-top: 1rem;
+    font-family: $lexend;
+    font-size: 1.475rem;
+    font-weight: 100;
+    line-height: 1rem;
+    text-transform: uppercase;
+
+    @include mediaqueries(small) {
+      font-size: 1.9rem;
+    }
+
+    @include mediaqueries(medium) {
+      margin-top: 1.5rem;
+      font-size: 3rem;
+    }
+
+    @include mediaqueries(large) {
+      margin-top: 2.15rem;
+      font-size: 3.5rem;
+    }
+
+    @include mediaqueries(xlarge) {
+      margin-top: 2.5rem;
+      font-size: 3.9rem;
+    }
+  }
+}
