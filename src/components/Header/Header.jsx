@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import kv from '../../img/kv.png';
 import kvBackground from '../../img/kv_background.png';
@@ -19,7 +20,7 @@ const Header = () => {
         <hr className={'header__hr'} />
         <span className={'header__subtitle'}>Mateusz&nbsp;Jakubczyk</span>
       </h1>
-
+      <Link className={'header__scroll-down'} to='about' smooth={true} duration={1000} offset={-100}></Link>
     </header>
   );
 }

@@ -1,0 +1,92 @@
+@import '../../mixin.module';
+@import '../../variables.module';
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+    text-align: center;
+
+    @include mediaqueries (medium) {
+        min-height: 80vh;
+    }
+
+    &__text {
+        font-family: $krona;
+        font-size: 2rem;
+
+        @include mediaqueries (medium) {
+            font-size: 2.5rem;
+        }
+
+        @include mediaqueries (large) {
+            font-size: 3rem;
+        }
+    }
+
+    &__accent {
+        color: $accent-color-primary;
+    }
+
+    &__mail {
+        display: block;
+        margin-top: 1.25rem;
+        color: $typography-color-primary;
+        text-decoration: underline;
+        text-decoration-color: $accent-color-secondary;
+        padding: .5rem;
+
+        @include mediaqueries (medium) {
+            text-decoration: none;
+        }
+
+        &:after {
+            @include mediaqueries (large) {
+                content: '';
+                display: block;
+                width: 70%;
+                height: 3px;
+                margin: 4px auto;
+                background-color: $accent-color-secondary;
+                transition: all .5s ease;
+                width: 0;
+                height: 5px;
+            }
+        }
+
+        &:visited {
+            color: $typography-color-primary
+        }
+
+        &:hover {
+            color: $typography-color-primary;
+
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 175%;
+        margin: 0 auto;
+        z-index: -1;
+        opacity: .8;
+
+        @include mediaqueries (medium) {
+            width: 100%;
+        }
+
+        @include mediaqueries (xlarge) {
+            width: 85%;
+            // left: 15%;
+            // top: 15%;
+
+        }
+    }
+}

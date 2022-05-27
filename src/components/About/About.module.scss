@@ -1,0 +1,148 @@
+@import '../../variables.module';
+@import '../../mixin.module';
+
+.about {
+  width: 100%;
+  margin-top: $section-margin;
+
+  @include mediaqueries (medium) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content-container {
+    @include mediaqueries (large) {
+      margin-left: auto;
+      max-width: 70%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @include mediaqueries (xlarge) {
+      max-width: 60%;
+    }
+  }
+
+  &__title-container {
+    @include mediaqueries (large) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+
+    @include mediaqueries (large) {
+      font-size: 3rem;
+    }
+
+    &--accent {
+      color: $accent-color-primary;
+    }
+  }
+
+  &__hr {
+    display: block;
+    width: 100%;
+    border: 1px solid $accent-color-primary;
+    margin: 1rem 0;
+  }
+
+  &__vr {
+    display: none;
+
+    @include mediaqueries (large) {
+      display: block;
+      width: 1px;
+      background-color: $typography-color-secondary;
+    }
+  }
+
+  &__text-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mediaqueries (large) {
+      width: 50%;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+
+  &__link {
+    width: 45%;
+    padding: 0.75rem 1.25rem;
+    margin: 2rem 0;
+    background-color: transparent;
+    border: 1px solid $accent-color-primary;
+    font-family: $lexend;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $accent-color-primary;
+    transition: .5s ease-in-out;
+
+    @include mediaqueries (large) {
+      margin: 2rem 0 0 0;
+    }
+
+    &:hover {
+      background-color: $accent-color-primary;
+      color: $bg-color-primary;
+    }
+
+    &--accent {
+      color: $accent-color-secondary;
+      border-color: $accent-color-secondary;
+
+      &:hover {
+        background-color: $accent-color-secondary;
+        color: $bg-color-primary;
+      }
+    }
+  }
+
+  &__social-link {
+    text-decoration: none;
+    color: $typography-color-primary;
+
+    &:visited {
+      color: $typography-color-primary;
+    }
+
+    &:hover {
+      color: $accent-color-primary;
+    }
+  }
+
+  &__techstack {
+    @include mediaqueries (large) {
+      width: 40%;
+    }
+  }
+
+  &__subtitle {
+    color: $accent-color-secondary;
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+
+  &__x,
+  &__links-x {
+    color: $typography-color-secondary;
+  }
+
+  &__links-x {
+    margin: 0 .7rem;
+  }
+
+}

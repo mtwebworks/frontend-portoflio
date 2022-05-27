@@ -5,6 +5,7 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  // background-color: aquamarine;
 
   &__img-wrapper {
     top: 15%;
@@ -127,5 +128,66 @@
       margin-top: 2.5rem;
       font-size: 3.9rem;
     }
+  }
+
+  &__scroll-down {
+    position: absolute;
+    bottom: 2.5vh;
+    right: 0;
+    width: 35px;
+    height: 25px;
+    animation: top-down-smallscreen 1s 1.5s infinite alternate;
+    cursor: pointer;
+
+    @include mediaqueries (medium) {
+      animation-name: top-down-mediumscreen;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 25px;
+      margin: 0 auto;
+      background-color: $typography-color-primary;
+      transition: all .5s ease-in-out;
+    }
+
+    &:before {
+      transform: translate(-9px, 0)rotate(-45deg);
+    }
+
+    &:after {
+      transform: translate(8px, -25px) rotate(45deg);
+    }
+
+    &:hover {
+
+      &:before,
+      &:after {
+        background-color: $accent-color-secondary;
+      }
+    }
+  }
+}
+
+@keyframes top-down-smallscreen {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes top-down-mediumscreen {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-25px);
   }
 }

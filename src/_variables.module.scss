@@ -7,6 +7,10 @@ $typography-color-secondary: #a69997;
 $accent-color-primary: #c7303c;
 $accent-color-secondary: #34c8ae;
 
+$link-color: $typography-color-secondary;
+$link-hover-color: $accent-color-primary;
+$link-visited-color: #6f2429;
+
 
 // Typography -------------------
 // Fontface 
@@ -23,9 +27,5 @@ $breakpoints: (
     xxlarge: (min-width: 1920px)
 );
 
-// Page width -------------------
-$page-width-small: 90vw;
-$page-width-medium: 96vw;
-$page-width-large: 94vw;
-$page-width-xlarge: 92vw;
-$page-width-xxlarge: 90vw;
+// Sections margin -------------------
+$section-margin: 20vh;

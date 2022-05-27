@@ -39,3 +39,31 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
+.responsive {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  height: 10px;
+  background-color: #ffffff;
+
+  @include mediaqueries (small) {
+    background-color: #00aeef;
+  }
+
+  @include mediaqueries (medium) {
+    background-color: #ec008c;
+  }
+
+  @include mediaqueries (large) {
+    background-color: #fff200;
+  }
+
+  @include mediaqueries (xlarge) {
+    background-color: #231f20;
+  }
+
+  @include mediaqueries (xxlarge) {
+    background-color: #797878;
+  }
+}
