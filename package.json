@@ -11,10 +11,13 @@
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
     "copy-webpack-plugin": "^11.0.0",
+    "gsap": "^3.10.4",
+    "hover-effect": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.7",
+    "three": "^0.141.0",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {
