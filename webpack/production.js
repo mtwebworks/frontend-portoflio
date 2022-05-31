@@ -3,6 +3,7 @@ const {
 } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   optimization: {
@@ -60,5 +61,11 @@ module.exports = {
       filename: 'style.[contenthash:6].css',
       chunkFilename: 'style.[contenthash:6].css'
     }),
+    new CopyPlugin({
+      patterns: [{
+        from: 'public/assets',
+        to: 'assets'
+      }]
+    })
   ],
 };
