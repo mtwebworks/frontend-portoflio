@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
-const Project = ({ projectName, discription, codeLink, liveLink }) => {
+const Project = ({ projectName, discription, codeLink, liveLink, thumbnail, thumbnailChange }) => {
 
+  const handleThumbnailChange = useCallback(() => {
+    thumbnailChange(thumbnail)
+  }, [thumbnailChange])
 
   return (
     <>
-      <li className='projects__item'>
+      <li onMouseOver={handleThumbnailChange} className='projects__item'>
         <div className='projects__discription'>
           <h3 className='projects__item-title'>{projectName}</h3>
           <p className='projects__item-discription'>{discription}</p>

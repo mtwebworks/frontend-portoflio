@@ -2,6 +2,7 @@
 @import '../../mixin.module';
 
 .projects {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,6 +22,7 @@
   &__list {
     padding-top: 2rem;
     list-style: none;
+    cursor: crosshair;
   }
 
   &__item {
@@ -72,6 +74,7 @@
     text-decoration: none;
     text-transform: uppercase;
     color: $link-color;
+    cursor: pointer;
 
     &:visited {
       color: $link-visited-color;
@@ -97,5 +100,20 @@
 
   &__hr {
     border: 1px solid $typography-color-secondary;
+  }
+
+  &__thumbnail-image {
+    position: fixed;
+    width: 40vw;
+    height: auto;
+    z-index: -10;
+    background-color: $shadow-color;
+    transition: opacity .25s ease-in, display .5s ease-in;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(5px 5px 25px $shadow-color) grayscale(50%);
+
+    @include mediaqueries (large) {
+      width: 30vw;
+    }
   }
 }

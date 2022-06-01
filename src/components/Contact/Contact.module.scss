@@ -10,6 +10,7 @@
     width: 100%;
     min-height: 90vh;
     text-align: center;
+    margin-top: 10vh;
 
     @include mediaqueries (medium) {
         min-height: 80vh;
@@ -18,18 +19,25 @@
     &__text {
         font-family: $krona;
         font-size: 2rem;
+        z-index: 1;
 
         @include mediaqueries (medium) {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
         }
 
         @include mediaqueries (large) {
             font-size: 3rem;
         }
+
+        @include mediaqueries (xxlarge) {
+            font-size: 3.5rem;
+        }
     }
 
     &__accent {
         color: $accent-color-primary;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        ;
     }
 
     &__mail {
@@ -45,7 +53,7 @@
         }
 
         &:after {
-            @include mediaqueries (large) {
+            @include mediaqueries (medium) {
                 content: '';
                 display: block;
                 width: 70%;
@@ -73,20 +81,19 @@
 
     &__img {
         position: absolute;
-        width: 175%;
+        width: 100vw;
+        height: 50vh;
         margin: 0 auto;
-        z-index: -1;
         opacity: .8;
 
+
         @include mediaqueries (medium) {
-            width: 100%;
+            height: 70vh;
         }
+    }
 
-        @include mediaqueries (xlarge) {
-            width: 85%;
-            // left: 15%;
-            // top: 15%;
-
-        }
+    &__canvas {
+        max-width: 1900px;
+        max-height: 700px;
     }
 }

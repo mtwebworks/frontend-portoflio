@@ -2,59 +2,108 @@
 @import '../../mixin.module';
 
 .header {
-  width: 100%;
-  min-height: 100vh;
   position: relative;
-  // background-color: aquamarine;
+  width: 100%;
+  height: 100vh;
+  min-height: 640px;
+
+  @include mediaqueries (medium) {
+    min-height: 768px;
+  }
+
+  @include mediaqueries (xlarge) {
+    min-height: 900px;
+  }
 
   &__img-wrapper {
-    top: 15%;
     position: absolute;
-    width: 100%;
-    max-width: 1080px;
+    width: 120%;
+    min-height: 100%;
+    max-width: 900px;
+    max-height: 900px;
+    top: 17.5%;
+    right: -10%;
 
-    @include mediaqueries(medium) {
+    @media (min-width: 400px) {
+      width: 130%;
+      top: 20%;
+      right: -17.5%;
+    }
+
+    @include mediaqueries (medium) {
+      width: 100%;
       top: 10%;
       right: 0;
     }
 
-    @include mediaqueries(large) {
-      right: -10%;
-    }
-
-    @include mediaqueries(xlarge) {
-      right: 0%;
-    }
-  }
-
-  &__kv,
-  &__kv-background {
-    position: absolute;
-    right: 52.5%;
-    width: 125%;
-    max-width: 1080px;
-    transform: translateX(50%);
-
-    @include mediaqueries(medium) {
-      right: 45%;
-      width: 85%;
-    }
-
-    @include mediaqueries(large) {
-      right: 45%;
-      width: 65%;
-    }
-
-    @include mediaqueries(xlarge) {
-      right: 40%;
-      width: 75%;
-    }
-
-    @include mediaqueries(xxlarge) {
-      right: 45%;
+    @include mediaqueries (large) {
       width: 80%;
+      top: 10%
+    }
+
+    @include mediaqueries (xlarge) {
+      width: 70%;
+      top: 8%
+    }
+
+    @include mediaqueries (xxlarge) {
+      width: 95%;
+      top: 10%
     }
   }
+
+  &__hover-effect {
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__canvas {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    object-fit: contain;
+  }
+
+  &__kv {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  // &__kv,
+  // &__kv-background {
+  //   position: absolute;
+  //   right: 52.5%;
+  //   width: 125%;
+  //   max-width: 1080px;
+  //   transform: translateX(50%);
+
+  //   @include mediaqueries(medium) {
+  //     right: 45%;
+  //     width: 85%;
+  //   }
+
+  //   @include mediaqueries(large) {
+  //     right: 45%;
+  //     width: 65%;
+  //   }
+
+  //   @include mediaqueries(xlarge) {
+  //     right: 40%;
+  //     width: 75%;
+  //   }
+
+  //   @include mediaqueries(xxlarge) {
+  //     right: 45%;
+  //     width: 80%;
+  //   }
+  // }
 
   &__title {
     display: flex;

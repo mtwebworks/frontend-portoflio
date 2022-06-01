@@ -14,7 +14,7 @@ const About = () => {
         </div>
         <div className='about__text-container'>
           <p className='about__text'>I am ambitious front-end developer with over a year of expirience and over 10 years expirience working as graphic desgner in creative agencies. I love to design, but i like to   bring designs alive even more.<br /><br />I strive for simplicity, clarity and originality in my work through designs where every decision is well thought and implemented to achieve set goals.</p>
-          <a className='about__link about__link--accent' href='' target="_blank" rel="noopener noreferrer">resume</a>
+          <a className='about__link about__link--accent' href='./assets/Resume_MateuszJakubczyk.pdf' target="_blank" rel="noopener noreferrer">resume</a>
           <Link className='about__link' to='contact' smooth={true} duration={1000}>contact</Link>
 
         </div>
@@ -40,9 +40,9 @@ const About = () => {
 
           <h3 className='about__subtitle'>Scocial Links</h3>
           <p className='about__text'>
-            <a className='about__social-link' href='https://www.linkedin.com/in/mtjakubek/'>linkedin</a><span className='about__links-x'>×</span>
-            <a className='about__social-link' href='https://github.com/mtwebworks'>github</a><span className='about__links-x'>×</span>
-            <a className='about__social-link' href='https://www.behance.net/mtjakubek'>behance</a></p>
+            <a className='about__social-link' href='https://www.linkedin.com/in/mtjakubek/' target='_blank'>linkedin</a><span className='about__links-x'>×</span>
+            <a className='about__social-link' href='https://github.com/mtwebworks' target='_blank'>github</a><span className='about__links-x'>×</span>
+            <a className='about__social-link' href='https://www.behance.net/mtjakubek' target='_blank'>behance</a></p>
         </div>
       </div>
     </section>
