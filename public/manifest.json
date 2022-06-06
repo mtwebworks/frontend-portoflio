@@ -1,0 +1,15 @@
+{
+  "short_name": "Mateusz Jakubczyk front-end developer portfolio",
+  "name": "Mateusz Jakubczyk - designer × developer",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#171916",
+  "background_color": "#171916"
+}
