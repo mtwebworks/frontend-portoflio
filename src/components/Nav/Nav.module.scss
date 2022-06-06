@@ -9,6 +9,10 @@
     justify-content: space-between;
     padding-top: 5vw;
     z-index: 1;
+    background: linear-gradient(0deg,
+            rgba(23, 25, 22, 0) 0%,
+            rgba(23, 25, 22, .65) 60%,
+            rgba(23, 25, 22, 1) 100%);
 
     @include mediaqueries (large) {
         padding-top: 2.5vw;

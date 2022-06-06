@@ -9,10 +9,14 @@
 
     &__img {
         display: block;
-        width: 5vw;
+        width: 5.5vw;
+
+        @include mediaqueries (medium) {
+            width: 4.5vw;
+        }
 
         @include mediaqueries (large) {
-            width: 2vw;
+            width: 2.25vw;
         }
     }
 
@@ -29,7 +33,7 @@
         font-family: $lexend;
         font-weight: 300;
         text-transform: uppercase;
-        margin: 2rem 0;
+        margin: 1rem 0 2rem 0;
         color: $typography-color-secondary;
     }
 
@@ -69,5 +73,9 @@
             justify-content: space-between;
             font-size: .75rem;
         }
+    }
+
+    &__animation-element {
+        opacity: 0;
     }
 }

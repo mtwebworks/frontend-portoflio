@@ -8,6 +8,25 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+
+  /* Scrollbar - Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $accent-color-primary transparent;
+
+  /* Scrollbar - Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-color-primary;
+    border: 2px solid transparent;
+  }
 }
 
 html {
@@ -42,4 +61,8 @@ p {
   @include mediaqueries (xxlarge) {
     width: 80vw;
   }
+}
+
+.app {
+  visibility: hidden;
 }
