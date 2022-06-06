@@ -1,14 +1,17 @@
 {
+  "homepage": "https://mtwebworks.github.io/frontend-portoflio/",
   "name": "mateuszjakubczyk-frontenddeveloper-portfolio",
   "version": "1.0.0",
   "description": "Mateusz Jakubczyk - front-end developer portfolio",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --mode=development --open-app-name chrome",
     "build": "webpack --mode=production"
   },
   "author": "Mateusz Jakubczyk",
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "UNLICENSED",
   "dependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "gsap": "^3.10.4",
@@ -31,6 +34,7 @@
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
