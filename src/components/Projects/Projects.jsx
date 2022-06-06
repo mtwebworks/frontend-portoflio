@@ -61,7 +61,7 @@ const Projects = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     }
-  })
+  }, [])
 
   return (
     <section ref={section} className='projects' id='projects'>
