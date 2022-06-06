@@ -50,7 +50,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
         use: [
           'file-loader',
-          'webp-loader'
+          'webp-loader?{quality: 85}'
         ],
       },
     ]
