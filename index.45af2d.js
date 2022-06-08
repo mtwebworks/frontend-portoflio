@@ -64580,8 +64580,9 @@ var Projects = function Projects() {
       setMousePosition = _useState4[1];
 
   var handleMouseMove = function handleMouseMove(e) {
+    var thumbnailOffset = document.querySelector('.projects__thumbnail-image').offsetLeft;
     setMousePosition({
-      x: e.clientX,
+      x: thumbnailOffset <= window.innerWidth * .825 ? thumbnailOffset + e.movementX / 4 : thumbnailOffset - 1,
       y: e.clientY
     });
   };
@@ -64591,7 +64592,7 @@ var Projects = function Projects() {
   };
 
   var handleMouseEnter = function handleMouseEnter() {
-    thumbnailImage.style.opacity = '.5';
+    thumbnailImage.style.opacity = '1';
   };
 
   var section = (0,react.useRef)(null);
@@ -64623,10 +64624,6 @@ var Projects = function Projects() {
     }));
   });
   (0,react.useEffect)(function () {
-    gsapWithCSS.to(thumbnailImage, 1, {
-      left: mousePosition.x,
-      top: mousePosition.y
-    });
     window.addEventListener("mousemove", handleMouseMove);
     return function () {
       window.removeEventListener("mousemove", handleMouseMove);
