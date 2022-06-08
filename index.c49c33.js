@@ -64492,7 +64492,7 @@ var Project = function Project(_ref) {
       thumbnailChange = _ref.thumbnailChange,
       animationClass = _ref.animationClass;
 
-  var _useState = (0,react.useState)(false),
+  var _useState = (0,react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       active = _useState2[0],
       setActive = _useState2[1];
@@ -64515,7 +64515,7 @@ var Project = function Project(_ref) {
   }, projectName), /*#__PURE__*/react.createElement("p", {
     className: "projects__item-tags"
   }, tags), /*#__PURE__*/react.createElement("div", {
-    className: "projects__item-description ".concat(active && 'projects__item-description--active')
+    className: "projects__item-description ".concat(active ? 'projects__item-description--active' : null)
   }, /*#__PURE__*/react.createElement("p", {
     className: "projects__item-text"
   }, description), /*#__PURE__*/react.createElement("p", {
@@ -64580,7 +64580,7 @@ var list = [{
 /* harmony default export */ const List = (list);
 ;// CONCATENATED MODULE: ./src/components/Projects/Projects.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Projects_module = ({"projects":"projects","projects__title":"projects__title","projects__list":"projects__list","projects__item":"projects__item","projects__item-title":"projects__item-title","projects__item-tags":"projects__item-tags","projects__item-description":"projects__item-description","projects__item-description--active":"projects__item-description--active","projects__item-text":"projects__item-text","projects__item-tech":"projects__item-tech","projects__item-accent":"projects__item-accent","projects__links":"projects__links","projects__link":"projects__link","projects__link--live":"projects__link--live","projects__separator":"projects__separator","projects__hr":"projects__hr","projects__thumbnail-image":"projects__thumbnail-image","projects__more-projects":"projects__more-projects","projects__animation-element":"projects__animation-element"});
+/* harmony default export */ const Projects_module = ({"projects":"projects","projects__title":"projects__title","projects__list":"projects__list","projects__item":"projects__item","projects__description":"projects__description","projects__item-title":"projects__item-title","projects__item-tags":"projects__item-tags","projects__item-description":"projects__item-description","projects__item-description--active":"projects__item-description--active","projects__item-text":"projects__item-text","projects__item-tech":"projects__item-tech","projects__item-accent":"projects__item-accent","projects__links":"projects__links","projects__link":"projects__link","projects__link--live":"projects__link--live","projects__separator":"projects__separator","projects__hr":"projects__hr","projects__thumbnail-image":"projects__thumbnail-image","projects__more-projects":"projects__more-projects","projects__animation-element":"projects__animation-element"});
 ;// CONCATENATED MODULE: ./src/components/Projects/Projects.jsx
 
 
@@ -64615,7 +64615,7 @@ var Projects = function Projects() {
   var handleMouseMove = function handleMouseMove(e) {
     var thumbnailOffset = document.querySelector('.projects__thumbnail-image').offsetLeft;
     setMousePosition({
-      x: thumbnailOffset <= window.innerWidth ? thumbnailOffset + e.movementX / 6.25 : thumbnailOffset - 1,
+      x: thumbnailOffset <= window.innerWidth ? thumbnailOffset + e.movementX / 5.5 : thumbnailOffset - 1,
       y: e.clientY
     });
   };
