@@ -8,9 +8,7 @@ import List from './List';
 import './Projects.module.scss';
 
 const Projects = () => {
-
   let thumbnailImage = useRef(null);
-
   const [thumbnailImageState, setThumbnailImageState] = useState(null);
   const [mousePosition, setMousePosition] = useState({
     x: "",
@@ -18,8 +16,10 @@ const Projects = () => {
   });
 
   const handleMouseMove = (e) => {
+    const thumbnailOffset = document.querySelector('.projects__thumbnail-image').offsetLeft;
     setMousePosition({
-      x: e.clientX,
+      x: thumbnailOffset <= (window.innerWidth * .825)
+        ? thumbnailOffset + (e.movementX / 4) : thumbnailOffset - 1,
       y: e.clientY,
     })
   }
@@ -28,7 +28,7 @@ const Projects = () => {
     thumbnailImage.style.opacity = '0';
   }
   const handleMouseEnter = () => {
-    thumbnailImage.style.opacity = '.5';
+    thumbnailImage.style.opacity = '1';
   }
 
   const section = useRef(null);
@@ -54,9 +54,8 @@ const Projects = () => {
 
   const Projects = List.map(project => <Project key={project.id} {...project} thumbnailChange={setThumbnailImageState} animationClass={'projects__animation-element'} />)
 
-  useEffect(() => {
-    gsap.to(thumbnailImage, 1, { left: mousePosition.x, top: mousePosition.y });
 
+  useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -70,7 +69,9 @@ const Projects = () => {
         <hr className='projects__hr projects__animation-element' />
         {Projects}
       </ul>
-      <img ref={element => thumbnailImage = element} className='projects__thumbnail-image' style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }} src={thumbnailImageState} alt="" />
+      <img ref={element => thumbnailImage = element} className='projects__thumbnail-image'
+        style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
+        src={thumbnailImageState} alt="" />
     </section>
   );
 }
