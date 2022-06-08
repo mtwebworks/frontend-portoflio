@@ -37,6 +37,11 @@
     }
   }
 
+  &__description {
+
+    max-width: 80%;
+  }
+
   &__item-title {
     font-family: $lexend;
     font-size: 1.75rem;
@@ -59,8 +64,6 @@
 
   &__item-description {
     max-height: 0;
-    max-width: 550px;
-    width: 100%;
     overflow: hidden;
     font-weight: 200;
     font-size: 1.2rem;
@@ -68,7 +71,7 @@
     transition: max-height 1s ease;
 
     &--active {
-      max-height: 700px;
+      max-height: 1000px;
       height: auto;
     }
   }
@@ -77,7 +80,7 @@
 
   &__item-text,
   &__item-tech {
-    min-width: 400px;
+    max-width: 600px;
     margin-top: 1.5rem;
   }
 

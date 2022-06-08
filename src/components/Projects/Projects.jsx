@@ -22,7 +22,7 @@ const Projects = () => {
 
     setMousePosition({
       x: thumbnailOffset <= (window.innerWidth)
-        ? thumbnailOffset + (e.movementX / 6.25) : thumbnailOffset - 1,
+        ? thumbnailOffset + (e.movementX / 5.5) : thumbnailOffset - 1,
       y: e.clientY,
     })
   }

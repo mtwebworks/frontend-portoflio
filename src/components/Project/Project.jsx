@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 
 
 const Project = ({ projectName, tags, codeLink, liveLink, thumbnail, description, tech, thumbnailChange, animationClass, }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(null);
 
   const handleMouseClick = () => {
     setActive(!active);
@@ -18,7 +18,7 @@ const Project = ({ projectName, tags, codeLink, liveLink, thumbnail, description
         <div className='projects__description'>
           <h3 onClick={handleMouseClick} className='projects__item-title'>{projectName}</h3>
           <p className='projects__item-tags'>{tags}</p>
-          <div className={`projects__item-description ${active && 'projects__item-description--active'}`}>
+          <div className={`projects__item-description ${active ? 'projects__item-description--active' : null}`}>
             <p className='projects__item-text'>
               {description}
             </p>
