@@ -52,6 +52,11 @@ p {
 }
 
 #root {
+  width: 100vw;
+}
+
+.app {
+  visibility: hidden;
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -61,8 +66,4 @@ p {
   @include mediaqueries (xxlarge) {
     width: 80vw;
   }
-}
-
-.app {
-  visibility: hidden;
 }

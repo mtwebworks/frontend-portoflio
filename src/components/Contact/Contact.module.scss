@@ -10,7 +10,7 @@
     width: 100%;
     min-height: 80vh;
     text-align: center;
-
+    margin-top: 5vh;
 
     @include mediaqueries (medium) {
         margin-top: 10vh;
@@ -57,8 +57,7 @@
         display: block;
         margin-top: 1.25rem;
         color: $typography-color-primary;
-        text-decoration: underline;
-        text-decoration-color: $accent-color-secondary;
+        text-decoration: underline solid $accent-color-secondary .2rem;
         padding: .5rem;
 
         @include mediaqueries (medium) {
