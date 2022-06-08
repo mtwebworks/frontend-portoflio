@@ -64480,14 +64480,27 @@ function _extends() {
 ;// CONCATENATED MODULE: ./src/components/Project/Project.jsx
 
 
+
 var Project = function Project(_ref) {
   var projectName = _ref.projectName,
-      discription = _ref.discription,
+      tags = _ref.tags,
       codeLink = _ref.codeLink,
       liveLink = _ref.liveLink,
       thumbnail = _ref.thumbnail,
+      description = _ref.description,
+      tech = _ref.tech,
       thumbnailChange = _ref.thumbnailChange,
       animationClass = _ref.animationClass;
+
+  var _useState = (0,react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      active = _useState2[0],
+      setActive = _useState2[1];
+
+  var handleMouseClick = function handleMouseClick() {
+    setActive(!active);
+  };
+
   var handleThumbnailChange = (0,react.useCallback)(function () {
     thumbnailChange(thumbnail);
   }, [thumbnailChange]);
@@ -64495,12 +64508,21 @@ var Project = function Project(_ref) {
     onMouseOver: handleThumbnailChange,
     className: "projects__item ".concat(animationClass)
   }, /*#__PURE__*/react.createElement("div", {
-    className: "projects__discription"
+    className: "projects__description"
   }, /*#__PURE__*/react.createElement("h3", {
+    onClick: handleMouseClick,
     className: "projects__item-title"
   }, projectName), /*#__PURE__*/react.createElement("p", {
-    className: "projects__item-discription"
-  }, discription)), /*#__PURE__*/react.createElement("div", {
+    className: "projects__item-tags"
+  }, tags), /*#__PURE__*/react.createElement("div", {
+    className: "projects__item-description ".concat(active && 'projects__item-description--active')
+  }, /*#__PURE__*/react.createElement("p", {
+    className: "projects__item-text"
+  }, description), /*#__PURE__*/react.createElement("p", {
+    className: "projects__item-tech"
+  }, /*#__PURE__*/react.createElement("span", {
+    className: "projects__item-accent"
+  }, "Tech: "), tech))), /*#__PURE__*/react.createElement("div", {
     className: "projects__links"
   }, codeLink ? /*#__PURE__*/react.createElement("a", {
     className: "projects__link",
@@ -64531,28 +64553,34 @@ var Project = function Project(_ref) {
 var list = [{
   id: 1,
   projectName: 'Zabudowany bus',
-  discription: 'design  +  development',
+  tags: 'design  +  development',
   liveLink: 'https://zabudowanybus.pl/',
-  thumbnail: zabudowanybus
+  thumbnail: zabudowanybus,
+  description: 'Simple responsive website for company which produce custom wooden floor and side panels for vans.',
+  tech: 'RWD, HTML, CSS, BEM, JavaScript'
 }, {
   id: 2,
   projectName: 'Weather app',
-  discription: 'design  +  development',
+  tags: 'design  +  development',
   codeLink: 'https://github.com/mtwebworks/weather-app',
   liveLink: 'https://mtwebworks.github.io/weather-app/',
-  thumbnail: weatherapp
+  thumbnail: weatherapp,
+  description: 'Simple weather app with detailed current weather state and next days forecast.',
+  tech: 'RWD, HTML, CSS, BEM, JavaScript, API'
 }, {
   id: 3,
   projectName: 'Time trakcer',
-  discription: 'design  +  development',
+  tags: 'design  +  development',
   codeLink: 'https://github.com/mtwebworks/timetracker-app',
   liveLink: 'https://mtwebworks.github.io/timetracker-app/',
-  thumbnail: timetracker
+  thumbnail: timetracker,
+  description: 'Timetracker app allows to track your daily workflow and helps count the amount of time you spend on different tasks, and various activities.',
+  tech: 'RWD, HTML, CSS, BEM, JavaScript'
 }];
 /* harmony default export */ const List = (list);
 ;// CONCATENATED MODULE: ./src/components/Projects/Projects.module.scss
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const Projects_module = ({"projects":"projects","projects__title":"projects__title","projects__list":"projects__list","projects__item":"projects__item","projects__item-title":"projects__item-title","projects__item-discription":"projects__item-discription","projects__links":"projects__links","projects__link":"projects__link","projects__link--live":"projects__link--live","projects__separator":"projects__separator","projects__hr":"projects__hr","projects__thumbnail-image":"projects__thumbnail-image","projects__animation-element":"projects__animation-element"});
+/* harmony default export */ const Projects_module = ({"projects":"projects","projects__title":"projects__title","projects__list":"projects__list","projects__item":"projects__item","projects__item-title":"projects__item-title","projects__item-tags":"projects__item-tags","projects__item-description":"projects__item-description","projects__item-description--active":"projects__item-description--active","projects__item-text":"projects__item-text","projects__item-tech":"projects__item-tech","projects__item-accent":"projects__item-accent","projects__links":"projects__links","projects__link":"projects__link","projects__link--live":"projects__link--live","projects__separator":"projects__separator","projects__hr":"projects__hr","projects__thumbnail-image":"projects__thumbnail-image","projects__more-projects":"projects__more-projects","projects__animation-element":"projects__animation-element"});
 ;// CONCATENATED MODULE: ./src/components/Projects/Projects.jsx
 
 
@@ -64566,23 +64594,28 @@ var list = [{
 var Projects = function Projects() {
   var thumbnailImage = (0,react.useRef)(null);
 
-  var _useState = (0,react.useState)(null),
+  var _useState = (0,react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
-      thumbnailImageState = _useState2[0],
-      setThumbnailImageState = _useState2[1];
+      offset = _useState2[0],
+      setOffset = _useState2[1];
 
-  var _useState3 = (0,react.useState)({
+  var _useState3 = (0,react.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      thumbnailImageState = _useState4[0],
+      setThumbnailImageState = _useState4[1];
+
+  var _useState5 = (0,react.useState)({
     x: "",
     y: ""
   }),
-      _useState4 = _slicedToArray(_useState3, 2),
-      mousePosition = _useState4[0],
-      setMousePosition = _useState4[1];
+      _useState6 = _slicedToArray(_useState5, 2),
+      mousePosition = _useState6[0],
+      setMousePosition = _useState6[1];
 
   var handleMouseMove = function handleMouseMove(e) {
     var thumbnailOffset = document.querySelector('.projects__thumbnail-image').offsetLeft;
     setMousePosition({
-      x: thumbnailOffset <= window.innerWidth * .825 ? thumbnailOffset + e.movementX / 4 : thumbnailOffset - 1,
+      x: thumbnailOffset <= window.innerWidth ? thumbnailOffset + e.movementX / 6.25 : thumbnailOffset - 1,
       y: e.clientY
     });
   };
@@ -64592,6 +64625,10 @@ var Projects = function Projects() {
   };
 
   var handleMouseEnter = function handleMouseEnter() {
+    setMousePosition({
+      x: offset,
+      y: ""
+    });
     thumbnailImage.style.opacity = '1';
   };
 
@@ -64624,6 +64661,7 @@ var Projects = function Projects() {
     }));
   });
   (0,react.useEffect)(function () {
+    setOffset(thumbnailImage.offsetLeft);
     window.addEventListener("mousemove", handleMouseMove);
     return function () {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -64652,7 +64690,9 @@ var Projects = function Projects() {
     },
     src: thumbnailImageState,
     alt: ""
-  }));
+  }), /*#__PURE__*/react.createElement("span", {
+    className: "projects__more-projects projects__animation-element"
+  }, "More projects coming soon..."));
 };
 
 /* harmony default export */ const Projects_Projects = (Projects);
