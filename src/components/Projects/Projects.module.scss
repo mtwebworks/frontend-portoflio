@@ -22,7 +22,6 @@
   &__list {
     padding-top: 2rem;
     list-style: none;
-    cursor: crosshair;
   }
 
   &__item {
@@ -34,6 +33,7 @@
     @include mediaqueries (large) {
       width: 95%;
       margin: 0 auto;
+      padding: 2.5rem 0;
     }
   }
 
@@ -41,19 +41,49 @@
     font-family: $lexend;
     font-size: 1.75rem;
     font-weight: 300;
+    cursor: pointer;
 
     @include mediaqueries (large) {
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
-  &__item-discription {
+  &__item-tags {
     font-family: $lexend;
     font-weight: 100;
 
     @include mediaqueries (large) {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
     }
+  }
+
+  &__item-description {
+    max-height: 0;
+    max-width: 550px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: $typography-color-secondary;
+    transition: max-height 1s ease;
+
+    &--active {
+      max-height: 700px;
+      height: auto;
+    }
+  }
+
+
+
+  &__item-text,
+  &__item-tech {
+    min-width: 400px;
+    margin-top: 1.5rem;
+  }
+
+  &__item-accent {
+    font-weight: 300;
+    color: $accent-color-secondary;
   }
 
   &__links {
@@ -74,6 +104,7 @@
     text-decoration: none;
     text-transform: uppercase;
     color: $link-color;
+    line-height: 25px;
     cursor: pointer;
 
     &:visited {
@@ -123,16 +154,25 @@
       width: 40vw;
       height: auto;
       z-index: -9;
-      left: 72.5%;
+      left: 72%;
       background-color: $shadow-color;
       transition: opacity .25s ease-in, display .5s ease-in;
-      transform: translate(-100%, -50%);
+      transform: translate(-90%, -50%);
       filter: drop-shadow(5px 5px 25px $shadow-color) grayscale(25%);
     }
 
     @include mediaqueries (large) {
       width: 30vw;
     }
+  }
+
+  &__more-projects {
+    display: block;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    font-family: $krona;
+    font-size: 1rem;
+    color: $typography-color-secondary;
   }
 
   &__animation-element {

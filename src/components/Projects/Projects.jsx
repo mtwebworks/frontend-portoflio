@@ -8,7 +8,9 @@ import List from './List';
 import './Projects.module.scss';
 
 const Projects = () => {
+
   let thumbnailImage = useRef(null);
+  const [offset, setOffset] = useState("");
   const [thumbnailImageState, setThumbnailImageState] = useState(null);
   const [mousePosition, setMousePosition] = useState({
     x: "",
@@ -17,9 +19,10 @@ const Projects = () => {
 
   const handleMouseMove = (e) => {
     const thumbnailOffset = document.querySelector('.projects__thumbnail-image').offsetLeft;
+
     setMousePosition({
-      x: thumbnailOffset <= (window.innerWidth * .825)
-        ? thumbnailOffset + (e.movementX / 4) : thumbnailOffset - 1,
+      x: thumbnailOffset <= (window.innerWidth)
+        ? thumbnailOffset + (e.movementX / 6.25) : thumbnailOffset - 1,
       y: e.clientY,
     })
   }
@@ -28,6 +31,10 @@ const Projects = () => {
     thumbnailImage.style.opacity = '0';
   }
   const handleMouseEnter = () => {
+    setMousePosition({
+      x: offset,
+      y: "",
+    })
     thumbnailImage.style.opacity = '1';
   }
 
@@ -56,6 +63,7 @@ const Projects = () => {
 
 
   useEffect(() => {
+    setOffset(thumbnailImage.offsetLeft);
     window.addEventListener("mousemove", handleMouseMove);
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -72,6 +80,7 @@ const Projects = () => {
       <img ref={element => thumbnailImage = element} className='projects__thumbnail-image'
         style={{ left: `${mousePosition.x}px`, top: `${mousePosition.y}px` }}
         src={thumbnailImageState} alt="" />
+      <span className='projects__more-projects projects__animation-element'>More projects coming soon...</span>
     </section>
   );
 }

@@ -1,6 +1,12 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 
-const Project = ({ projectName, discription, codeLink, liveLink, thumbnail, thumbnailChange, animationClass }) => {
+
+const Project = ({ projectName, tags, codeLink, liveLink, thumbnail, description, tech, thumbnailChange, animationClass, }) => {
+  const [active, setActive] = useState(false);
+
+  const handleMouseClick = () => {
+    setActive(!active);
+  }
 
   const handleThumbnailChange = useCallback(() => {
     thumbnailChange(thumbnail)
@@ -9,9 +15,17 @@ const Project = ({ projectName, discription, codeLink, liveLink, thumbnail, thum
   return (
     <>
       <li onMouseOver={handleThumbnailChange} className={`projects__item ${animationClass}`}>
-        <div className='projects__discription'>
-          <h3 className='projects__item-title'>{projectName}</h3>
-          <p className='projects__item-discription'>{discription}</p>
+        <div className='projects__description'>
+          <h3 onClick={handleMouseClick} className='projects__item-title'>{projectName}</h3>
+          <p className='projects__item-tags'>{tags}</p>
+          <div className={`projects__item-description ${active && 'projects__item-description--active'}`}>
+            <p className='projects__item-text'>
+              {description}
+            </p>
+            <p className='projects__item-tech'>
+              <span className='projects__item-accent'>Tech: </span>{tech}
+            </p>
+          </div>
         </div>
         <div className='projects__links'>
           {codeLink ? <a className='projects__link' href={codeLink} target="_blank">code</a> : null}
