@@ -39,6 +39,7 @@
 
     @include mediaqueries (large) {
         padding: 2.5vw 0 0 0;
+        width: 90vw;
     }
 
     @include mediaqueries (xxlarge) {
