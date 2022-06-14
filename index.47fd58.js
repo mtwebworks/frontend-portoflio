@@ -64389,7 +64389,7 @@ var About = function About() {
     className: "about__text-container about__animation-element"
   }, /*#__PURE__*/react.createElement("p", {
     className: "about__text"
-  }, "I\xA0am ambitious front-end developer with over 2\xA0year of noncommercial expirience and almost 10\xA0years of expirience working as graphic designer in creative agencies. I\xA0love to design, but i\xA0like to bring designs alive even more.", /*#__PURE__*/react.createElement("br", null), /*#__PURE__*/react.createElement("br", null), "I\xA0strive for simplicity, clarity and originality in my work through designs where every decision is well thought and implemented to achieve set goals."), /*#__PURE__*/react.createElement("a", {
+  }, "I\xA0am ambitious front-end developer with over 2\xA0year of noncommercial expirience and almost 10\xA0years of expirience as a graphic designer in creative agencies. I\xA0love to design, but i\xA0also like to bring designs alive even more.", /*#__PURE__*/react.createElement("br", null), /*#__PURE__*/react.createElement("br", null), "I\xA0strive for simplicity, clarity and originality in my work through designs where every decision is well thought and implemented to achieve set goals."), /*#__PURE__*/react.createElement("a", {
     className: "about__link about__link--accent",
     href: "./assets/CV_MateuszJakubczyk_EN22.pdf",
     target: "_blank",
@@ -64417,7 +64417,7 @@ var About = function About() {
     className: "about__x"
   }, "\xD7"), "\xA0gsap ", /*#__PURE__*/react.createElement("span", {
     className: "about__x"
-  }, "\xD7"), "\xA0java script ", /*#__PURE__*/react.createElement("span", {
+  }, "\xD7"), "\xA0javascript ", /*#__PURE__*/react.createElement("span", {
     className: "about__x"
   }, "\xD7"), "\xA0react ", /*#__PURE__*/react.createElement("span", {
     className: "about__x"
@@ -64429,7 +64429,7 @@ var About = function About() {
     className: "about__x"
   }, "\xD7"), "\xA0git"), /*#__PURE__*/react.createElement("h3", {
     className: "about__subtitle"
-  }, "Tools"), /*#__PURE__*/react.createElement("p", {
+  }, "tools"), /*#__PURE__*/react.createElement("p", {
     className: "about__text"
   }, "vscode ", /*#__PURE__*/react.createElement("span", {
     className: "about__x"
@@ -64437,7 +64437,7 @@ var About = function About() {
     className: "about__x"
   }, "\xD7"), "\xA0illustrator"), /*#__PURE__*/react.createElement("h3", {
     className: "about__subtitle"
-  }, "Scocial Links"), /*#__PURE__*/react.createElement("p", {
+  }, "scocial links"), /*#__PURE__*/react.createElement("p", {
     className: "about__text"
   }, /*#__PURE__*/react.createElement("a", {
     className: "about__social-link",
