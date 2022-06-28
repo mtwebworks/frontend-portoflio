@@ -64588,7 +64588,7 @@ var list = [{
   tags: 'design  +  development',
   codeLink: 'https://github.com/mtwebworks/portfolio',
   thumbnail: fep,
-  description: 'Personal front-end portfolio.',
+  description: 'Personal front-end portfolio website.',
   tech: 'RWD, HTML, SCSS, BEM, JavaScript, React, GSAP'
 }, {
   id: 3,
