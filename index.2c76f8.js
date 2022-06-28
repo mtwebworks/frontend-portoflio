@@ -64586,7 +64586,7 @@ var list = [{
   id: 4,
   projectName: 'Front-end portfolio',
   tags: 'design  +  development',
-  codeLink: 'https://github.com/mtwebworks/timetracker-app',
+  codeLink: 'https://github.com/mtwebworks/portfolio',
   thumbnail: fep,
   description: 'Personal front-end portfolio.',
   tech: 'RWD, HTML, SCSS, BEM, JavaScript, React, GSAP'
