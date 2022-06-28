@@ -64546,7 +64546,13 @@ var Project = function Project(_ref) {
 /* harmony default export */ const weatherapp = (__webpack_require__.p + "6f28e88fc9a36c18df47bdda612f8a3f.png");
 ;// CONCATENATED MODULE: ./src/img/timetracker.png
 /* harmony default export */ const timetracker = (__webpack_require__.p + "0aba13d0afc4d1c70ee313c1039d61a5.png");
+;// CONCATENATED MODULE: ./src/img/fep.png
+/* harmony default export */ const fep = (__webpack_require__.p + "262d2514cf2624ddd8ef6aa1f9608b15.png");
+;// CONCATENATED MODULE: ./src/img/geministudio.png
+/* harmony default export */ const geministudio = (__webpack_require__.p + "3b6f4728051b1760f997cdb4ab212096.png");
 ;// CONCATENATED MODULE: ./src/components/Projects/List.js
+
+
 
 
 
@@ -64576,6 +64582,23 @@ var list = [{
   thumbnail: timetracker,
   description: 'Timetracker app allows to track your daily workflow and helps count the amount of time you spend on different tasks, and various activities.',
   tech: 'RWD, HTML, CSS, BEM, JavaScript'
+}, {
+  id: 4,
+  projectName: 'Front-end portfolio',
+  tags: 'design  +  development',
+  codeLink: 'https://github.com/mtwebworks/timetracker-app',
+  thumbnail: fep,
+  description: 'Personal front-end portfolio.',
+  tech: 'RWD, HTML, SCSS, BEM, JavaScript, React, GSAP'
+}, {
+  id: 3,
+  projectName: 'Gemini Studio',
+  tags: 'design',
+  // codeLink: 'https://github.com/mtwebworks/timetracker-app',
+  liveLink: 'https://geministudio.pl',
+  thumbnail: geministudio,
+  description: 'Company website created Wordpress CMS and Avada theme.',
+  tech: 'Wordpress setup/Avada theme'
 }];
 /* harmony default export */ const List = (list);
 ;// CONCATENATED MODULE: ./src/components/Projects/Projects.module.scss
