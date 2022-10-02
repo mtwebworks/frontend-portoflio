@@ -43,7 +43,7 @@ const list = [{
     tech: 'RWD, HTML, SCSS, BEM, JavaScript, React, GSAP',
   },
   {
-    id: 3,
+    id: 5,
     projectName: 'Gemini Studio',
     tags: 'design',
     // codeLink: 'https://github.com/mtwebworks/timetracker-app',
