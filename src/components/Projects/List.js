@@ -1,6 +1,8 @@
 import zabudowanybus from '../../img/zabudowanybus.png';
 import weatherapp from '../../img/weatherapp.png';
 import timetracker from '../../img/timetracker.png';
+import portfolio from '../../img/fep.png';
+import geministudio from '../../img/geministudio.png';
 
 const list = [{
     id: 1,
@@ -30,6 +32,25 @@ const list = [{
     thumbnail: timetracker,
     description: 'Timetracker app allows to track your daily workflow and helps count the amount of time you spend on different tasks, and various activities.',
     tech: 'RWD, HTML, CSS, BEM, JavaScript',
+  },
+  {
+    id: 4,
+    projectName: 'Front-end portfolio',
+    tags: 'design  +  development',
+    codeLink: 'https://github.com/mtwebworks/portfolio',
+    thumbnail: portfolio,
+    description: 'Personal front-end portfolio website.',
+    tech: 'RWD, HTML, SCSS, BEM, JavaScript, React, GSAP',
+  },
+  {
+    id: 3,
+    projectName: 'Gemini Studio',
+    tags: 'design',
+    // codeLink: 'https://github.com/mtwebworks/timetracker-app',
+    liveLink: 'https://geministudio.pl',
+    thumbnail: geministudio,
+    description: 'Company website created Wordpress CMS and Avada theme.',
+    tech: 'Wordpress setup/Avada theme',
   },
 ]
 
